@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card class="cardDesign">
+        <mat-card-title>Insert Java code</mat-card-title>
+        <mat-form-field class="full-width" appearance='legacy'>
+            <mat-label>Code name</mat-label>
+            <input matInput required placeholder="code name" [(ngModel)]="name">
+        </mat-form-field>
+        <mat-card-content>
+
+            <mat-form-field class="full-width centerSingleComponent" appearance="fill">
+                <mat-label>Java Code</mat-label>
+                <textarea matInput rows='25' placeholder="Insert Java code here" [(ngModel)]='javaCode'></textarea>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class='centerSingleComponent'>
+                <button mat-raised-button color='primary' (click)='parseJavaCode()'>Submit code</button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

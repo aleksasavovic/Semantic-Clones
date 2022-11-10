@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<div class='container' fxLayoutAlign="center center">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+        <mat-card (click)='activeCodes()' fxLayout="column" fxFlex.md="0 1 calc(33% - 20px)"
+            fxFlex="0 1 calc(33% - 20px)" fxFlex.sm="0 1 calc(33% - 20px)" fxFlex.xs="100" class="product">
+            <img mat-card-image class="picture" src='../../assets/diplomski_klonslika.jpg'>
+            <mat-card-title>Active Codes</mat-card-title>
+            <mat-card-content>
+                Click here to see all currently active codes. You will be able to see reviews, and move codes to
+                inactive state.
+
+            </mat-card-content>
+        </mat-card>
+        
+        <mat-card (click)='addCode()' fxLayout="column" fxFlex.md="0 1 calc(33% - 20px)" fxFlex="0 1 calc(33% - 20px)"
+            fxFlex.sm="0 1 calc(33% - 20px)" fxFlex.xs="100" class="product">
+            <img mat-card-image class="picture" src='../../assets/diplomski_klonslika.jpg'>
+            <mat-card-title>Add New Code</mat-card-title>
+            <mat-card-content>
+                Click here to add new code for reviews! After you add a code, it will apear in active codes!
+
+            </mat-card-content>
+        </mat-card>
+        <mat-card (click)='addNewUser()' fxLayout="column" fxFlex.md="0 1 calc(33% - 20px)"
+            fxFlex="0 1 calc(33% - 20px)" fxFlex.sm="0 1 calc(33% - 20px)" fxFlex.xs="100" class="product">
+            <img mat-card-image class="picture" src='../../assets/diplomski_klonslika.jpg'>
+            <mat-card-title>Add User</mat-card-title>
+            <mat-card-content>
+               Click here to add new user! After you add user, he will be able to log in!
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

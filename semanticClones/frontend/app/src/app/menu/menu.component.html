@@ -1,0 +1,36 @@
+<mat-toolbar color='primary' class='navbar'>
+
+    <div>
+        SemClone
+    </div>
+    <div *ngIf='!userInfo'>
+        <button mat-button (click)='login()'>Login</button>
+        <button mat-button (click)='register()'>Register</button>
+    </div>
+    <div *ngIf='userInfo && userInfo.type=="admin"'>
+        <button mat-button (click)='adminHome()'>Home</button>
+        <button mat-button [matMenuTriggerFor]="codes" yPosition="below">Codes</button>
+        <mat-menu #codes="matMenu">
+            <button mat-menu-item  (click)="activeCodes()">View All Codes</button>
+            <button mat-menu-item (click)="addNewCode()">Add New Code</button>
+        </mat-menu>
+        <button mat-button (click)='addUser()'>Add User</button>
+        <button mat-button [matMenuTriggerFor]="menu2" yPosition="below">{{userInfo.username}}</button>
+        <mat-menu #menu2="matMenu">
+            <button mat-menu-item (click)="logout()">Log Out</button>
+        </mat-menu>
+    </div>
+    <div *ngIf='userInfo && userInfo.type=="regular"'>
+        <button mat-button (click)='userHome()'>Home</button>
+        <button mat-button [matMenuTriggerFor]="codes" yPosition="below">Codes</button>
+        <mat-menu #codes="matMenu">
+            <button mat-menu-item  (click)="random()">Mix It Up</button>
+            <button mat-menu-item  (click)="chooseFromExistingCodes()">Seclect Code</button>
+            <button mat-menu-item  (click)="startedReviews()">Continue Reviewing</button>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="menu2" yPosition="below">{{userInfo.username}}</button>
+        <mat-menu #menu2="matMenu">
+            <button mat-menu-item (click)="logout()">Log Out</button>
+        </mat-menu>
+    </div>
+</mat-toolbar>

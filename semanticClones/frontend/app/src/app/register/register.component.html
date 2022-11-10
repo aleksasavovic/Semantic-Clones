@@ -1,0 +1,60 @@
+<app-menu></app-menu>
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card class="cardDesign">
+        <mat-card-header>
+            <mat-card-title>
+                Register Form
+
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div>
+                <mat-form-field class="half-width" appearance='legacy'>
+                    <mat-label>username</mat-label>
+                    <input matInput required placeholder="username" [(ngModel)]="username">
+                </mat-form-field>
+                <div class='divider'></div>
+                <mat-form-field class="half-width" appearance='legacy'>
+                    <mat-label>e-mail</mat-label>
+                    <input matInput required placeholder="e-mail" [(ngModel)]="email">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="half-width" appearance='legacy'>
+                    <mat-label>first name</mat-label>
+                    <input matInput required placeholder="first name" [(ngModel)]="firstName">
+                </mat-form-field>
+                <div class="divider"></div>
+                <mat-form-field class="half-width" appearance='legacy'>
+                    <mat-label>last name</mat-label>
+                    <input matInput required placeholder="last name" [(ngModel)]="lastName">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="half-width">
+                    <mat-label>password</mat-label>
+                    <input matInput required [type]="hide ? 'password' : 'text'"[(ngModel)]="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            <div class="divider"></div>
+                <mat-form-field class="half-width">
+                    <mat-label>repeat password</mat-label>
+                    <input matInput required [type]="hideRepeat ? 'password' : 'text'"[(ngModel)]='pwRepeat'>
+                    <button mat-icon-button matSuffix (click)="hideRepeat = !hideRepeat" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hideRepeat ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div class="centerSingleComponent">
+                <button mat-raised-button color="primary" (click)='register()'>Register</button>
+      
+            </div>
+            <br>
+            <div class="centerSingleComponent">
+                <button mat-button color="primary" (click)='login()'>Already have an account? Login here!</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

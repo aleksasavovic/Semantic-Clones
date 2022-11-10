@@ -1,0 +1,9 @@
+.cardDesign {
+    min-width: 20%;
+    
+    margin: 20px auto;
+    background-color: aliceblue;
+  }
+.full-width {
+    width: 100%;
+  }

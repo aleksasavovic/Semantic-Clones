@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+<div class="container" *ngIf='codes && codes.length>0 && readyToLoad'>
+    <div *ngIf="codes" fxLayout="row wrap" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+        <mat-card (click)="viewCode(code)" fxLayout="column" fxFlex.md="0 1 calc(33% - 20px)"
+            fxFlex="0 1 calc(25% - 20px)" fxFlex.sm="0 1 calc(50% - 20px)" fxFlex.xs="100"
+            *ngFor="let code of codesOnPage" class="product">
+            <mat-card-title>Name: {{code.name}}</mat-card-title>
+            <mat-card-content fxFlex>
+                <div class='centerSingleComponent'>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+<div *ngIf="codes">
+    <mat-paginator [length]="codes.length" [pageSize]="12" (page)="pageEvent($event)">
+    </mat-paginator>
+</div>
+<div *ngIf='!codes || codes.length==0' class="centerSingleComponent">
+    <h1>There are no codes</h1>
+</div>

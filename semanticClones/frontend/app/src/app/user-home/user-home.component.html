@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<div class='container' fxLayoutAlign="center center">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+        <mat-card (click)='random()' fxLayout="column" fxFlex.md="0 1 calc(33% - 20px)" fxFlex="0 1 calc(33% - 20px)"
+            fxFlex.sm="0 1 calc(33% - 20px)" fxFlex.xs="100" class="product">
+            <img mat-card-image class="picture" src='../../assets/diplomski_klonslika.jpg'>
+            <mat-card-title>Mix it up</mat-card-title>
+            <mat-card-content>
+                Click here to get all available methods mixed up!
+
+            </mat-card-content>
+        </mat-card>
+        <mat-card (click)='selected()' fxLayout="column" fxFlex.md="0 1 calc(33% - 20px)" fxFlex="0 1 calc(33% - 20px)"
+            fxFlex.sm="0 1 calc(33% - 20px)" fxFlex.xs="100" class="product">
+            <img mat-card-image class="picture" src='../../assets/diplomski_klonslika.jpg'>
+            <mat-card-title>Select code</mat-card-title>
+            <mat-card-content>
+                Click here to choose which code you wanna review first!
+
+            </mat-card-content>
+        </mat-card>
+        <mat-card (click)='continue()' fxLayout="column" fxFlex.md="0 1 calc(33% - 20px)" fxFlex="0 1 calc(33% - 20px)"
+            fxFlex.sm="0 1 calc(33% - 20px)" fxFlex.xs="100" class="product">
+            <img mat-card-image class="picture" src='../../assets/diplomski_klonslika.jpg'>
+            <mat-card-title>Continue reviewing</mat-card-title>
+            <mat-card-content>
+                You have already started reviewing some codes? Click here!
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

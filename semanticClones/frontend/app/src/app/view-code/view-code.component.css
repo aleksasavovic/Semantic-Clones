@@ -1,0 +1,53 @@
+.cardDesign {
+    min-width: 70%;
+    
+    margin: 20px auto;
+  }
+.full-width {
+    width: 100%;
+  }
+.product{
+   min-width: 180px;
+   margin-bottom: 20px; /* same as fxLayoutGap for even distribution */
+}
+.mat-card {
+  height: 75% !important;
+  position: relative;
+  overflow: hidden;
+}
+.mat-card-content {
+  
+  max-height: 95%;
+  position: absolute;
+  overflow: auto;
+  margin-bottom: 2rem;white-space:pre-wrap;
+}
+.divider{
+  width:10px;
+  height:auto;
+  display:inline-block;
+}
+.centerSingleComponent{
+  display: flex;
+  justify-content: center;
+}
+h1{
+color:#3F51B5;
+font-weight: bold;
+font-style: italic;
+}
+h2{
+  color:#3F51B5;
+font-weight: bold;
+font-style: italic;
+}
+.container{
+  height:80%;
+  padding: 20px;
+  }
+.plainText{
+  color:#3F51B5;
+}
+.results{
+  color:#FF33CA;
+}

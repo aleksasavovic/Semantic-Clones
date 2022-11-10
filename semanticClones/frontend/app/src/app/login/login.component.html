@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card class="cardDesign">
+        <mat-card-header>
+            <mat-card-title>
+                Login Form
+
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div>
+                <mat-form-field class="full-width" appearance='legacy'>
+                    <mat-label>username</mat-label>
+                    <input matInput required placeholder="username" [(ngModel)]="username">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput required [type]="hide ? 'password' : 'text'"[(ngModel)]="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div class="centerSingleComponent">
+                <button mat-raised-button color="primary" (click)='login()'>Login</button>
+      
+            </div>
+            <br>
+            <div class="centerSingleComponent">
+                <button mat-button color="primary" (click)='register()'>Do not  have an account? Register here!</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+<div class='container'>
+    <div class='centerSingleComponent' *ngIf="!nothingLeftToCompare">
+        <button *ngIf='!started' (click)='start()' mat-raised-button>start</button>
+        <button *ngIf='started' (click)='stop()' mat-raised-button>stop</button>
+    </div>
+    <br />
+    <div class='centerSingleComponent' *ngIf="!nothingLeftToCompare">
+        <button mat-raised-button *ngIf='rating==0' color='primary' (click)='rate(0)' [disabled]='!started'>not a
+            clone</button>
+        <button mat-raised-button *ngIf='rating!=0' (click)='rate(0)' [disabled]='!started'>not a clone</button>
+        <button mat-raised-button *ngIf='rating==25' color='primary' (click)='rate(25) ' [disabled]='!started'>probably
+            not a clone</button>
+        <button mat-raised-button *ngIf='rating!=25' (click)='rate(25)' [disabled]='!started'>probably not a
+            clone</button>
+        <button mat-raised-button *ngIf='rating==50' color='primary' (click)='rate(50)' [disabled]='!started'>not
+            sure</button>
+        <button mat-raised-button *ngIf='rating!=50' (click)='rate(50)' [disabled]='!started'>not sure</button>
+        <button mat-raised-button *ngIf='rating==75' color='primary' (click)='rate(75)' [disabled]='!started'>probably a
+            clone</button>
+        <button mat-raised-button *ngIf='rating!=75' (click)='rate(75)' [disabled]='!started'>probably a clone</button>
+        <button mat-raised-button *ngIf='rating==100' color='primary' (click)='rate(100)'
+            [disabled]='!started'>clone</button>
+        <button mat-raised-button *ngIf='rating!=100' (click)='rate(100)' [disabled]='!started'>clone</button>
+    </div>
+    <br />
+    <div class='centerSingleComponent' *ngIf="!nothingLeftToCompare">
+        <button mat-raised-button (click)='confirm()' [disabled]='rating<0'> Submit </button>
+    </div>
+
+
+    <div fxLayoutAlign="center center" fxFlexFill fxLayoutGap="20px" *ngIf="!nothingLeftToCompare">
+        <mat-card fxLayout="column" fxFlex.md="0 1 calc(50% - 20px)" fxFlex="0 1 calc(40% - 20px)"
+            fxFlex.sm="0 1 calc(50% - 20px)" fxFlex.xs="100" class="product">
+
+            <mat-card-content>
+                {{m1}}
+            </mat-card-content>
+        </mat-card>
+        <mat-card fxLayout="column" fxFlex.md="0 1 calc(50% - 20px)" fxFlex="0 1 calc(40% - 20px)"
+            fxFlex.sm="0 1 calc(50% - 20px)" fxFlex.xs="100" class="product">
+            <mat-card-content>
+                {{m2}}
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+
+    <div class="centerSingleComponent" *ngIf="!nothingLeftToCompare">
+        <button mat-raised-button (click)='next()'>Next</button>
+    </div>
+    <div *ngIf="nothingLeftToCompare" class="centerSingleComponent">
+        <h1>U reviewed them all!</h1>
+    </div>
+</div>

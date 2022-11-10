@@ -1,0 +1,17 @@
+.cardDesign {
+    min-width: 30%;
+    
+    margin: 20px auto;
+    background-color: aliceblue;
+  }
+.full-width {
+    width: 100%;
+  }
+  .divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
+  }
+  .half-width{
+    width: 48%;
+  }

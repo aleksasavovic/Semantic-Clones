@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+<div class='container'>
+    <div class='centerSingleComponent' *ngIf='numberOfReviews>0'>
+        <div>
+            <h2>
+                Number of reviews :  {{numberOfReviews}}
+            </h2>
+            <h2>
+                Average rating :  {{averageRaiting}}% chance of being clones
+            </h2>
+            <h2>
+               Average review time :  {{minutes}}m:{{seconds}}s
+            </h2>
+        <!-- <output class="plainText">Number of reviews</output> <output>{{numberOfReviews}}</output>
+        <br/>
+        <output>Average rating:</output> <output>{{rating}}</output>
+        <br/>
+        <output>Average time :</output> <output>{{averageReviewTime}}</output> -->
+    </div>
+    </div>
+    <div *ngIf='numberOfReviews==0' class="centerSingleComponent">
+        <h1>There are no reviews for this combination</h1>
+    </div>
+    <div fxLayoutAlign="center center" fxFlexFill fxLayoutGap="20px">
+        <mat-card fxLayout="column" fxFlex.md="0 1 calc(50% - 20px)" fxFlex="0 1 calc(40% - 20px)"
+            fxFlex.sm="0 1 calc(50% - 20px)" fxFlex.xs="100" class="product">
+
+            <mat-card-content>
+                {{m1}}
+            </mat-card-content>
+        </mat-card>
+        <mat-card fxLayout="column" fxFlex.md="0 1 calc(50% - 20px)" fxFlex="0 1 calc(40% - 20px)"
+            fxFlex.sm="0 1 calc(50% - 20px)" fxFlex.xs="100" class="product">
+            <mat-card-content>
+                {{m2}}
+            </mat-card-content>
+        </mat-card>
+    </div>
+    
+    <div class="centerSingleComponent">
+        <button mat-raised-button (click)='next()'>Next</button>
+    </div>
+   
+</div>
