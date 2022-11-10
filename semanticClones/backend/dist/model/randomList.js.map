@@ -1,0 +1,1 @@
+{"version":3,"file":"randomList.js","sourceRoot":"","sources":["../../src/model/randomList.ts"],"names":[],"mappings":";;;;;AAAA,wDAA+B;AAE/B,MAAM,MAAM,GAAG,kBAAQ,CAAC,MAAM,CAAC;AAE/B,IAAI,UAAU,GAAG,IAAI,MAAM,CAAC;IACxB,UAAU,EAAC,KAAK;CACnB,CAAC,CAAA;AAEF,kBAAe,kBAAQ,CAAC,KAAK,CAAC,YAAY,EAAE,UAAU,EAAE,YAAY,CAAC,CAAC"}
